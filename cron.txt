@@ -1,0 +1,3 @@
+*/10 * * * * curl --silent http://207.251.86.229/nyc-links-cams/LinkSpeedQuery.txt >> /home/awc/Traffic_1/data.txt
+05 04 * * * R --file=/home/awc/Traffic_1/_format.R
+10 04 * * * R --file=/home/awc/Traffic_1/_diagnostics.R
