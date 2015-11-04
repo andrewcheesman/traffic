@@ -1,0 +1,18 @@
+{
+    "contents" : "# # TODO\n# \n# 1. Explore layers and groups in leaflet; may be able to update colors instead of re-mapping\n# 2. Eliminate graphing.R and roll into mapping.R\n# 3. Rename files more helpfully and change file name associations within scripts\n# 4. Fix diagnostic table output",
+    "created" : 1446656496805.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "213478948",
+    "id" : "7050BF59",
+    "lastKnownWriteTime" : 1446656686,
+    "path" : "~/Traffic_1/TODO.R",
+    "project_path" : "TODO.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
