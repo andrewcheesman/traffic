@@ -4,14 +4,13 @@
 # 
 # Daily Jobs
 # 1. CRON CURL (cron.txt): pulls data from NYCDOT every 10 minutes; appends to data.txt
-# 2. _format.R: generates a daily obs_*.RDA file and deletes data.txt
-# 3. _diags.R: generates a daily graph and table for quick verification of CRON CURL job
+# 2. DFS_Gen_DailyObs.R: generates a daily obs_*.RDA file and deletes data.txt (was _format.R)
+# 3. DIAGS.R: generates a daily graph and table for quick verification of CRON CURL job (was _diagnostics.R)
 # 
 # Weekly Jobs
-# 1. compiler.R: generates a compiled observation repository (obs_com.RDA)
-# 2. _spatial_setup.R: generates the basis for the spatialLinesDataFrame (ptl.RDA)
-# 3. mapping.R: generates mappable spatialLinesDataFrames (at full-week, weekday, and weekend levels) and the ggplot feeder (speed_trailers)
-# 4. graphing.R: generates avg_speed.RDA from speed_trailers # TODO: remove this step; generate avg_speed in mapping.R
+# 1. DFS_Gen_CompObs.R: generates a compiled observation repository (obs_com.RDA) (was compiler.R)
+# 2. MAP_Gen_SPLN.R: generates the basis for the spatialLinesDataFrame (ptl.RDA) (was spatial_setup.R)
+# 3. MAP_Gen_SPLNDF.R: generates mappable spatialLinesDataFrames with speed data (at full-week, weekday, and weekend levels) and the ggplot feeder (speed_trailers) (was mapping.R)
 # 
 # Ad Hoc Jobs
 # 1. Shiny Presentation:
