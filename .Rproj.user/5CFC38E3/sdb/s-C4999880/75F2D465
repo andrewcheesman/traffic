@@ -1,0 +1,17 @@
+{
+    "contents" : "####################################\n# File Descriptions and Scheduling #\n####################################\n# \n# Daily Jobs\n# 1. CRON CURL (cron.txt): pulls data from NYCDOT every 10 minutes; appends to data.txt\n# 2. 1_DFS_Gen_DailyObs.R: generates a daily obs_*.RDA file and deletes data.txt (was _format.R)\n# 3. 2_DIAGS.R: generates a daily graph and table for quick verification of CRON CURL job (was _diagnostics.R)\n# \n# Weekly Jobs\n# 1. 3_DFS_Gen_CompObs.R: generates a compiled observation repository (obs_com.RDA) (was compiler.R)\n# 2. 4_MAP_Gen_SPLN.R: generates the basis for the spatialLinesDataFrame (ptl.RDA) (was spatial_setup.R)\n# 3. 5_MAP_Gen_SPLNDF.R: generates mappable spatialLinesDataFrames with speed data (at full-week, weekday, and weekend levels) and the ggplot feeder (speed_trailers) (was mapping.R)\n# \n# Ad Hoc Jobs\n# 1. Shiny Presentation:\n#     a. global.R: loads spatialLinesDataFrame files for availability to Shiny\n#     b. server.R: performs background computation for Shiny\n#     c. ui.R: generates Shiny UI",
+    "created" : 1446749909430.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1103252299",
+    "id" : "75F2D465",
+    "lastKnownWriteTime" : 1446749792,
+    "path" : "~/Traffic_1/_File Structure.R",
+    "project_path" : "_File Structure.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
