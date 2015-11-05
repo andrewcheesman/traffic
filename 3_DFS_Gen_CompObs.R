@@ -17,3 +17,5 @@ assign("data", comp2)
 rm(comp, files, i, comp2)
 
 save(data, file = "/home/awc/Traffic_1/obs_com.RDA")
+
+rm(data)

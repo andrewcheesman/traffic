@@ -16,8 +16,6 @@
 library(sp)
 library(plyr)
 
-
-
 load("/home/awc/Traffic_1/ptl.RDA")
 load("/home/awc/Traffic_1/obs_com.RDA")
 

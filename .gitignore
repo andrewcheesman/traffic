@@ -45,3 +45,4 @@ splndf*
 sldf_*
 .RHistory
 *.RProj*
+.Rproj.user

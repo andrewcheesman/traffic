@@ -33,7 +33,7 @@ for (i in 1:length(files[,1])) {
 }
 dev.off()
 
-pdf(file = "/home/awc/Traffic_1/diags/table.pdf", width=10, height=4)
+pdf(file = "/home/awc/Traffic_1/diags/table.pdf", width=10, height = length(diags[,1])*.3)
 colnames(diags) <- c("file","tm_st","tm_nd","obs","pct_na","lnks","tms","tms_na")
 grid.table(diags)
 dev.off()
