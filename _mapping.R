@@ -16,6 +16,8 @@
 library(sp)
 library(plyr)
 
+
+
 load("/home/awc/Traffic_1/ptl.RDA")
 load("/home/awc/Traffic_1/obs_com.RDA")
 
@@ -235,4 +237,28 @@ for (m in 1:length(timesub3[,1])) {
 spd_trl_fnm3 <- paste0("/home/awc/Traffic_1/speed_trailer_wknd.RDA",sep="")
 save(speed_trailer_wknd, file=spd_trl_fnm3)
 
-rm(data_agg_wkdy, speed_trailer_wknd, timesub3, m, splndf, spd_trl_fnm3)
+rm(list=ls())
+
+##################################################
+# Imported from old file 'graphing.R'
+# Prepares speed rollups for graphing in ggplot
+
+load("/home/awc/Traffic_1/speed_trailer_full.RDA")
+load("/home/awc/Traffic_1/speed_trailer_wkdy.RDA")
+load("/home/awc/Traffic_1/speed_trailer_wknd.RDA")
+
+speed_trailer_full$id <- "All"
+speed_trailer_wkdy$id <- "Wkdys"
+speed_trailer_wknd$id <- "Wknds"
+
+avg_speed <- rbind(speed_trailer_full, 
+                   speed_trailer_wkdy,
+                   speed_trailer_wknd)
+
+rm(speed_trailer_full,
+   speed_trailer_wkdy,
+   speed_trailer_wknd)
+
+colnames(avg_speed)[3] <- "Period"
+
+save(avg_speed, file="/home/awc/Traffic_1/avg_speeds.RDA")
