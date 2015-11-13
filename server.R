@@ -23,7 +23,7 @@ shinyServer(function(input, output) {
   output$mymap <- renderLeaflet({
     leaflet(data=splndf) %>%
       setView(lng = -73.9, lat = 40.685, zoom = 11) %>%
-      addTiles("http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", attribution = 'Map layer by <a href="http://leaflet-extras.github.io/leaflet-providers/preview/index.html">ArcGIS</a>; Based on data available from <a href="http://207.251.86.229/nyc-links-cams/LinkSpeedQuery.txt">NYC DOT</a>') %>%
+      addTiles("http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", attribution = 'Map layer by <a href="http://leaflet-extras.github.io/leaflet-providers/preview/index.html">ArcGIS</a>; Based on data available from <a href="http://207.251.86.229/nyc-links-cams/LinkSpeedQuery.txt">NYC DOT</a>. Github <a href="https://github.com/andrewcheesman/traffic">here</a>.') %>%
       addPolylines(color = pal(splndf[[1]]), noClip = T, weight = .5) %>%
       addLegend("bottomleft", pal = pal, values = ~splndf[[1]],
                 title = "MPH",
